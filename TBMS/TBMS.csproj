@@ -1,0 +1,647 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{661DF201-2BEC-406E-8E93-77EC08FEA774}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TBMS</RootNamespace>
+    <AssemblyName>TBMS</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\a.vimeocdn.com\js\froogaloop2.min.js" />
+    <Content Include="Content\ajax.googleapis.com\ajax\libs\jquery\2.1.3\jquery.min.js" />
+    <Content Include="Content\backblue.gif" />
+    <Content Include="Content\bookatailor-go.com\css_new\css_clt.html" />
+    <Content Include="Content\bookatailor.com\about-us.html" />
+    <Content Include="Content\bookatailor.com\ajax.html" />
+    <Content Include="Content\bookatailor.com\assets\revolution-slider\images\gradient\g30.html" />
+    <Content Include="Content\bookatailor.com\assets\revolution-slider\images\gradient\g40.html" />
+    <Content Include="Content\bookatailor.com\assets_newap\css\bootstrap-theme.css" />
+    <Content Include="Content\bookatailor.com\assets_newap\css\bootstrap.min.css" />
+    <Content Include="Content\bookatailor.com\assets_newap\css\font-awesome.min.css" />
+    <Content Include="Content\bookatailor.com\assets_newap\css\global.css" />
+    <Content Include="Content\bookatailor.com\assets_newap\css\responsive.css" />
+    <Content Include="Content\bookatailor.com\assets_newap\css\skin.css" />
+    <Content Include="Content\bookatailor.com\assets_newap\css\style.css" />
+    <Content Include="Content\bookatailor.com\assets_newap\fonts\fontawesome-webfont862f.html" />
+    <Content Include="Content\bookatailor.com\assets_newap\fonts\fontawesome-webfont862f.svg" />
+    <Content Include="Content\bookatailor.com\assets_newap\fonts\glyphicons-halflings-regular.html" />
+    <Content Include="Content\bookatailor.com\assets_newap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\bookatailor.com\assets_newap\fonts\lato-black-webfont.html" />
+    <Content Include="Content\bookatailor.com\assets_newap\fonts\lato-black-webfont.svg" />
+    <Content Include="Content\bookatailor.com\assets_newap\img\active.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\img\bg-testimonials.html" />
+    <Content Include="Content\bookatailor.com\assets_newap\img\breadcrumb-bg.html" />
+    <Content Include="Content\bookatailor.com\assets_newap\img\dotted-line.html" />
+    <Content Include="Content\bookatailor.com\assets_newap\img\icons.html" />
+    <Content Include="Content\bookatailor.com\assets_newap\img\inactive.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\img\launch-bg.html" />
+    <Content Include="Content\bookatailor.com\assets_newap\img\parallax-banner-02.html" />
+    <Content Include="Content\bookatailor.com\assets_newap\img\progress-bg.html" />
+    <Content Include="Content\bookatailor.com\assets_newap\img\save-lives.html" />
+    <Content Include="Content\bookatailor.com\assets_newap\img\volunteer.html" />
+    <Content Include="Content\bookatailor.com\assets_newap\js\bootstrap.min.js" />
+    <Content Include="Content\bookatailor.com\assets_newap\js\jquery.easing.min.js" />
+    <Content Include="Content\bookatailor.com\assets_newap\js\jquery.flexslider.js" />
+    <Content Include="Content\bookatailor.com\assets_newap\js\jquery.min.js" />
+    <Content Include="Content\bookatailor.com\assets_newap\js\site.js" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\css\settings.css" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\fonts\revicons90c6-2.html" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\fonts\revicons90c6-3.html" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\fonts\revicons90c6-4.html" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\fonts\revicons90c6.html" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\arrowleft.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\arrowright.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\arrow_left.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\arrow_left2.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\arrow_right.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\arrow_right2.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\boxed_bgtile.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\bullet.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\bullets.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\bullets2.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\bullet_boxed.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\coloredbg.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\gridtile.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\gridtile_3x3.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\gridtile_3x3_white.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\gridtile_white.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\large_left.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\large_right.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\loader.gif" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\navigdots.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\navigdots_bgtile.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\shadow1.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\shadow2.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\shadow3.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\small_left.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\small_left_boxed.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\small_right.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\small_right_boxed.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\img\rev-img\timer.png" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\js\jquery.themepunch.plugins.min.js" />
+    <Content Include="Content\bookatailor.com\assets_newap\revolution-slider\js\jquery.themepunch.revolution.js" />
+    <Content Include="Content\bookatailor.com\ClanOT-Black-2.html" />
+    <Content Include="Content\bookatailor.com\ClanOT-Black.html" />
+    <Content Include="Content\bookatailor.com\ClanOT-Black.svg" />
+    <Content Include="Content\bookatailor.com\ClanOT-Bold-2.html" />
+    <Content Include="Content\bookatailor.com\ClanOT-Bold.html" />
+    <Content Include="Content\bookatailor.com\ClanOT-Bold.svg" />
+    <Content Include="Content\bookatailor.com\ClanOT-Book-2.html" />
+    <Content Include="Content\bookatailor.com\ClanOT-Book.html" />
+    <Content Include="Content\bookatailor.com\ClanOT-Book.svg" />
+    <Content Include="Content\bookatailor.com\ClanOT-Medium-2.html" />
+    <Content Include="Content\bookatailor.com\ClanOT-Medium.html" />
+    <Content Include="Content\bookatailor.com\ClanOT-Medium.svg" />
+    <Content Include="Content\bookatailor.com\ClanOT-News-2.html" />
+    <Content Include="Content\bookatailor.com\ClanOT-News.html" />
+    <Content Include="Content\bookatailor.com\ClanOT-News.svg" />
+    <Content Include="Content\bookatailor.com\ClanOT-Thin-2.html" />
+    <Content Include="Content\bookatailor.com\ClanOT-Thin.html" />
+    <Content Include="Content\bookatailor.com\ClanOT-Thin.svg" />
+    <Content Include="Content\bookatailor.com\ClanOT-Ultra-2.html" />
+    <Content Include="Content\bookatailor.com\ClanOT-Ultra.html" />
+    <Content Include="Content\bookatailor.com\ClanOT-Ultra.svg" />
+    <Content Include="Content\bookatailor.com\contact.html" />
+    <Content Include="Content\bookatailor.com\css\AjaxLoader.html" />
+    <Content Include="Content\bookatailor.com\css\animate1_batnew.css" />
+    <Content Include="Content\bookatailor.com\css\animate_batnew.css" />
+    <Content Include="Content\bookatailor.com\css\bootstrap_batnew.min.css" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Black-2.html" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Black.html" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Black.svg" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Bold-2.html" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Bold.html" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Bold.svg" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Book-2.html" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Book.html" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Book.svg" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Medium-2.html" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Medium.html" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Medium.svg" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-News-2.html" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-News.html" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-News.svg" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Thin-2.html" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Thin.html" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Thin.svg" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Ultra-2.html" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Ultra.html" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Ultra.svg" />
+    <Content Include="Content\bookatailor.com\css\fancybox\blank.gif" />
+    <Content Include="Content\bookatailor.com\css\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="Content\bookatailor.com\css\fancybox\fancybox_loading.gif" />
+    <Content Include="Content\bookatailor.com\css\fancybox\fancybox_overlay.png" />
+    <Content Include="Content\bookatailor.com\css\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="Content\bookatailor.com\css\fancybox\fancybox_sprite.png" />
+    <Content Include="Content\bookatailor.com\css\fancybox\jquery.fancybox.css" />
+    <Content Include="Content\bookatailor.com\css\file1.css" />
+    <Content Include="Content\bookatailor.com\css\font-awesome.min.css" />
+    <Content Include="Content\bookatailor.com\css\grabbing.html" />
+    <Content Include="Content\bookatailor.com\css\img-zoom\jquery.simpleLens.css" />
+    <Content Include="Content\bookatailor.com\css\main_batnew.css" />
+    <Content Include="Content\bookatailor.com\css\normalize_batnew.css" />
+    <Content Include="Content\bookatailor.com\css\owl.carousel_batnew.css" />
+    <Content Include="Content\bookatailor.com\css\owl.theme.css" />
+    <Content Include="Content\bookatailor.com\css\owl.transitions.css" />
+    <Content Include="Content\bookatailor.com\css\responsive_batnew.css" />
+    <Content Include="Content\bookatailor.com\css\slicknav_batnew.css" />
+    <Content Include="Content\bookatailor.com\deal\css\pikaday.css" />
+    <Content Include="Content\bookatailor.com\deal\GET.html" />
+    <Content Include="Content\bookatailor.com\deal\index-2.html" />
+    <Content Include="Content\bookatailor.com\deal\index.html" />
+    <Content Include="Content\bookatailor.com\deal\indexddff.html" />
+    <Content Include="Content\bookatailor.com\deal\jquery.selectric.js" />
+    <Content Include="Content\bookatailor.com\deal\js\iframeResizer.min.js" />
+    <Content Include="Content\bookatailor.com\deal\lib\jquery.min.js" />
+    <Content Include="Content\bookatailor.com\deal\logo_bat.png" />
+    <Content Include="Content\bookatailor.com\deal\pikaday.js" />
+    <Content Include="Content\bookatailor.com\deal\selectric.css" />
+    <Content Include="Content\bookatailor.com\deal\stb.dropdown.min.css" />
+    <Content Include="Content\bookatailor.com\deal\stb.dropdown.min.js" />
+    <Content Include="Content\bookatailor.com\demo\css\calendar-style_batnew.css" />
+    <Content Include="Content\bookatailor.com\demo\css\prism_batnew.css" />
+    <Content Include="Content\bookatailor.com\demo\js_batnew\bootstrap.min.js" />
+    <Content Include="Content\bookatailor.com\demo\js_batnew\jquery.latest.min.js" />
+    <Content Include="Content\bookatailor.com\demo\js_batnew\prism.min.js" />
+    <Content Include="Content\bookatailor.com\dist\whatsapp-button.js" />
+    <Content Include="Content\bookatailor.com\external.html" />
+    <Content Include="Content\bookatailor.com\faq.html" />
+    <Content Include="Content\bookatailor.com\favicon.ico" />
+    <Content Include="Content\bookatailor.com\fonts\fontawesome-webfonte0a5-2.html" />
+    <Content Include="Content\bookatailor.com\fonts\fontawesome-webfonte0a5.html" />
+    <Content Include="Content\bookatailor.com\fonts\fontawesome-webfonte0a5.svg" />
+    <Content Include="Content\bookatailor.com\fonts\glyphicons-halflings-regular-2.html" />
+    <Content Include="Content\bookatailor.com\fonts\glyphicons-halflings-regular.html" />
+    <Content Include="Content\bookatailor.com\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\bookatailor.com\footer1.html" />
+    <Content Include="Content\bookatailor.com\franchise.html" />
+    <Content Include="Content\bookatailor.com\GET.html" />
+    <Content Include="Content\bookatailor.com\how_It_works.html" />
+    <Content Include="Content\bookatailor.com\images-bat\arrows.png" />
+    <Content Include="Content\bookatailor.com\images-bat\bka.png" />
+    <Content Include="Content\bookatailor.com\images-bat\cancel.png" />
+    <Content Include="Content\bookatailor.com\images-bat\f_top.png" />
+    <Content Include="Content\bookatailor.com\images-bat\g_top.png" />
+    <Content Include="Content\bookatailor.com\images-bat\insto_top.png" />
+    <Content Include="Content\bookatailor.com\images-bat\pin_top.png" />
+    <Content Include="Content\bookatailor.com\images-bat\spu.png" />
+    <Content Include="Content\bookatailor.com\images-bat\tit_top.png" />
+    <Content Include="Content\bookatailor.com\images\dott.html" />
+    <Content Include="Content\bookatailor.com\img\about-img_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\about-us\about-img2.html" />
+    <Content Include="Content\bookatailor.com\img\abt_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\arrow_batnew.png" />
+    <Content Include="Content\bookatailor.com\img\austin_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\bat_batnew.png" />
+    <Content Include="Content\bookatailor.com\img\blg_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\blog_bg_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\boston_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\brand_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\capitolhill.jpg" />
+    <Content Include="Content\bookatailor.com\img\cart-remove_batnew.png" />
+    <Content Include="Content\bookatailor.com\img\category-image_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\chicago_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\contact_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\date_batnew.png" />
+    <Content Include="Content\bookatailor.com\img\f1_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\f2_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\f3_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\f4_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\f5_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\f6_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\f7_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\fabric_batnew.png" />
+    <Content Include="Content\bookatailor.com\img\facebook.png" />
+    <Content Include="Content\bookatailor.com\img\faq_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\favicon.ico" />
+    <Content Include="Content\bookatailor.com\img\franchise_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\google.png" />
+    <Content Include="Content\bookatailor.com\img\greatneck_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\houston_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\how1_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\how2_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\how3_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\how4_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\how_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\icon-cartwhite_batnew.png" />
+    <Content Include="Content\bookatailor.com\img\icon-close_batnew.png" />
+    <Content Include="Content\bookatailor.com\img\icon-lockwhite_batnew.png" />
+    <Content Include="Content\bookatailor.com\img\icon-searchwhite_batnew.png" />
+    <Content Include="Content\bookatailor.com\img\imagedoc-darknoise_batnew.png" />
+    <Content Include="Content\bookatailor.com\img\instgram.png" />
+    <Content Include="Content\bookatailor.com\img\jacomo_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\job_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\logo-bat1.png" />
+    <Content Include="Content\bookatailor.com\img\logo-bat_batnew.png" />
+    <Content Include="Content\bookatailor.com\img\logo_footer.png" />
+    <Content Include="Content\bookatailor.com\img\man1_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\man_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\march-banner.jpg" />
+    <Content Include="Content\bookatailor.com\img\march-banner2.jpg" />
+    <Content Include="Content\bookatailor.com\img\measured_batnew.png" />
+    <Content Include="Content\bookatailor.com\img\miami-beach_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\military_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\newsletter-bg_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\ny_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\p10_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\p11_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\p12_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\p13_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\p14_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\p15_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\p16_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\p17_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\p1_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\p2_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\p3_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\p4_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\p5_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\p6-1_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\p6_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\p7_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\p8_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\p9_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\pag-arrow_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\page404bg_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\policy_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\portfolio-header.jpg" />
+    <Content Include="Content\bookatailor.com\img\portfolio-shadow.png" />
+    <Content Include="Content\bookatailor.com\img\press_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\pricing_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\printrest.png" />
+    <Content Include="Content\bookatailor.com\img\privacy_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\product-banner.jpg" />
+    <Content Include="Content\bookatailor.com\img\quote-bg_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\quote-icon.png" />
+    <Content Include="Content\bookatailor.com\img\refer_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\search-icon_batnew.png" />
+    <Content Include="Content\bookatailor.com\img\shadow1.png" />
+    <Content Include="Content\bookatailor.com\img\shadow2.png" />
+    <Content Include="Content\bookatailor.com\img\shadow3.png" />
+    <Content Include="Content\bookatailor.com\img\sign_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\students_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\suit_batnew.png" />
+    <Content Include="Content\bookatailor.com\img\tailor_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\togglerwhite_batnew.png" />
+    <Content Include="Content\bookatailor.com\img\twitter.png" />
+    <Content Include="Content\bookatailor.com\img\tysonsva_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\wall.jpg" />
+    <Content Include="Content\bookatailor.com\img\wall1.jpg" />
+    <Content Include="Content\bookatailor.com\img\wdc_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\weddings1_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\weddings_batnew.jpg" />
+    <Content Include="Content\bookatailor.com\img\youtube.png" />
+    <Content Include="Content\bookatailor.com\index.html" />
+    <Content Include="Content\bookatailor.com\indexc9cb.html" />
+    <Content Include="Content\bookatailor.com\inquiry.html" />
+    <Content Include="Content\bookatailor.com\join-team.html" />
+    <Content Include="Content\bookatailor.com\js\batnew_jquery-scrolltofixed_batnew.js" />
+    <Content Include="Content\bookatailor.com\js\batnew_jquery-ui.min.js" />
+    <Content Include="Content\bookatailor.com\js\batnew_jquery.appear.js" />
+    <Content Include="Content\bookatailor.com\js\batnew_jquery.collapse.js" />
+    <Content Include="Content\bookatailor.com\js\batnew_jquery.countdown.min.js" />
+    <Content Include="Content\bookatailor.com\js\batnew_jquery.counterup.min.js" />
+    <Content Include="Content\bookatailor.com\js\batnew_jquery.easing.1.3.min.js" />
+    <Content Include="Content\bookatailor.com\js\batnew_jquery.knob.js" />
+    <Content Include="Content\bookatailor.com\js\batnew_jquery.shuffle.min.js" />
+    <Content Include="Content\bookatailor.com\js\batnew_jquery.slicknav.js" />
+    <Content Include="Content\bookatailor.com\js\batnew_main.js" />
+    <Content Include="Content\bookatailor.com\js\batnew_owl.carousel.min.js" />
+    <Content Include="Content\bookatailor.com\js\batnew_parallax.js" />
+    <Content Include="Content\bookatailor.com\js\batnew_plugins.js" />
+    <Content Include="Content\bookatailor.com\js\batnew_waypoints.min.js" />
+    <Content Include="Content\bookatailor.com\js\batnew_wow.js" />
+    <Content Include="Content\bookatailor.com\js\bootstrap.min.js" />
+    <Content Include="Content\bookatailor.com\js\bootstrap_batnew.min.js" />
+    <Content Include="Content\bookatailor.com\js\classie.html" />
+    <Content Include="Content\bookatailor.com\js\fancybox\jquery.fancybox.pack.js" />
+    <Content Include="Content\bookatailor.com\js\file1.js" />
+    <Content Include="Content\bookatailor.com\js\file2.js" />
+    <Content Include="Content\bookatailor.com\js\file3.js" />
+    <Content Include="Content\bookatailor.com\js\file5.js" />
+    <Content Include="Content\bookatailor.com\js\file6.js" />
+    <Content Include="Content\bookatailor.com\js\iframeResizer.contentWindow.min.js" />
+    <Content Include="Content\bookatailor.com\js\img-zoom\jquery.simpleLens.min.js" />
+    <Content Include="Content\bookatailor.com\js\jquery-ui.js" />
+    <Content Include="Content\bookatailor.com\js\jquery.flexslider.js" />
+    <Content Include="Content\bookatailor.com\js\jquery.mask.min.js" />
+    <Content Include="Content\bookatailor.com\js\jquery.scrollUp.min.js" />
+    <Content Include="Content\bookatailor.com\js\vendor\modernizr-2.8.3.min.js" />
+    <Content Include="Content\bookatailor.com\js_newb\vendor\modernizr-2.8.3.min.js" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\arrowleft.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\arrowright.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\arrow_left.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\arrow_left2.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\arrow_right.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\arrow_right2.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\boxed_bgtile.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\bullet.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\bullets.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\bullets2.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\bullet_boxed.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\coloredbg.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\gridtile.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\gridtile_3x3.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\gridtile_3x3_white.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\gridtile_white.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\large_left.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\large_right.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\loader.gif" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\navigdots.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\navigdots_bgtile.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\shadow1.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\shadow2.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\shadow3.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\small_left.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\small_left_boxed.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\small_right.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\small_right_boxed.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\assets_batnew\timer.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\css_batnew\settings.css" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\font\revicons90c6.html" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\font\revicons90c6.svg" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\images_batnew\gradient\g30.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\images_batnew\gradient\g40.png" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\js_batnew\jquery.themepunch.revolution.min.js" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\js_batnew\jquery.themepunch.tools.min.js" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\rs.home.js" />
+    <Content Include="Content\bookatailor.com\location.html" />
+    <Content Include="Content\bookatailor.com\military.html" />
+    <Content Include="Content\bookatailor.com\militarydiscount\css\pikaday.css" />
+    <Content Include="Content\bookatailor.com\militarydiscount\GET.html" />
+    <Content Include="Content\bookatailor.com\militarydiscount\index.html" />
+    <Content Include="Content\bookatailor.com\militarydiscount\indexddff.html" />
+    <Content Include="Content\bookatailor.com\militarydiscount\stb.dropdown.min.css" />
+    <Content Include="Content\bookatailor.com\militarydiscount\stb.dropdown.min.js" />
+    <Content Include="Content\bookatailor.com\mobile.css" />
+    <Content Include="Content\bookatailor.com\new.css" />
+    <Content Include="Content\bookatailor.com\our-ceo.html" />
+    <Content Include="Content\bookatailor.com\pickup\css\pikaday.css" />
+    <Content Include="Content\bookatailor.com\pickup\img.html" />
+    <Content Include="Content\bookatailor.com\pickup\index.html" />
+    <Content Include="Content\bookatailor.com\pickup\mail.html" />
+    <Content Include="Content\bookatailor.com\pickup\Popover requires tooltip.html" />
+    <Content Include="Content\bookatailor.com\pickup\stb.dropdown.min.css" />
+    <Content Include="Content\bookatailor.com\pickup\stb.dropdown.min.js" />
+    <Content Include="Content\bookatailor.com\pickup\Version\index.html" />
+    <Content Include="Content\bookatailor.com\PIE.htc" />
+    <Content Include="Content\bookatailor.com\Popover requires tooltip.html" />
+    <Content Include="Content\bookatailor.com\press.html" />
+    <Content Include="Content\bookatailor.com\privacy-policy.html" />
+    <Content Include="Content\bookatailor.com\public_batnew\jquery.selectric.js" />
+    <Content Include="Content\bookatailor.com\public_batnew\lib\demo.js" />
+    <Content Include="Content\bookatailor.com\public_batnew\lib\jquery-ui.min.js" />
+    <Content Include="Content\bookatailor.com\public_batnew\lib\jquery.minicolors.min.js" />
+    <Content Include="Content\bookatailor.com\public_batnew\lib\prism.css" />
+    <Content Include="Content\bookatailor.com\public_batnew\lib\prism.js" />
+    <Content Include="Content\bookatailor.com\public_batnew\selectric.css" />
+    <Content Include="Content\bookatailor.com\refund-policy.html" />
+    <Content Include="Content\bookatailor.com\selectric.html" />
+    <Content Include="Content\bookatailor.com\Shuffle.js requires Modernizr.html" />
+    <Content Include="Content\bookatailor.com\src_batnew\css\pignose.calendar.css" />
+    <Content Include="Content\bookatailor.com\src_batnew\image\icon_navs.png" />
+    <Content Include="Content\bookatailor.com\src_batnew\image\icon_navs_dark.png" />
+    <Content Include="Content\bookatailor.com\src_batnew\js\pignose.calendar.js" />
+    <Content Include="Content\bookatailor.com\students.html" />
+    <Content Include="Content\bookatailor.com\studentsdiscount\css\pikaday.css" />
+    <Content Include="Content\bookatailor.com\studentsdiscount\GET.html" />
+    <Content Include="Content\bookatailor.com\studentsdiscount\index.html" />
+    <Content Include="Content\bookatailor.com\studentsdiscount\indexddff.html" />
+    <Content Include="Content\bookatailor.com\studentsdiscount\stb.dropdown.min.css" />
+    <Content Include="Content\bookatailor.com\studentsdiscount\stb.dropdown.min.js" />
+    <Content Include="Content\bookatailor.com\style1.css" />
+    <Content Include="Content\bookatailor.com\themes\template\selectric.html" />
+    <Content Include="Content\bookatailor.com\top1.html" />
+    <Content Include="Content\bookatailor.com\TweenLite.html" />
+    <Content Include="Content\bookatailor.com\vender_batnew\moment.min.js" />
+    <Content Include="Content\bookatailor.com\Version\index.html" />
+    <Content Include="Content\bookatailor.com\weddings.html" />
+    <Content Include="Content\bookatailor.com\_appointment-slots7a2c.html" />
+    <Content Include="Content\bookatailor.com\_appointment-time7a2c.html" />
+    <Content Include="Content\bookatailor.com\_pickup-slotsd6d4.html" />
+    <Content Include="Content\bookatailor.com\_returning-customerde7d.html" />
+    <Content Include="Content\bookatailor.com\_returning-customerea4e.html" />
+    <Content Include="Content\bookatailor.com\_showrooms-pickup9a71.html" />
+    <Content Include="Content\bookatailor.com\_showrooms.html" />
+    <Content Include="Content\connect.facebook.net\en_US\fbevents.js" />
+    <Content Include="Content\cookies.txt" />
+    <Content Include="Content\fade.gif" />
+    <Content Include="Content\hts-cache\new.lst" />
+    <Content Include="Content\hts-cache\new.txt" />
+    <Content Include="Content\hts-cache\old.lst" />
+    <Content Include="Content\hts-cache\old.txt" />
+    <Content Include="Content\hts-cache\readme.txt" />
+    <Content Include="Content\hts-log.txt" />
+    <Content Include="Content\www.google-analytics.com\analytics.js" />
+    <Content Include="Content\www.googleadservices.com\pagead\f.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="Content\bookatailor.com\assets_newap\fonts\fontawesome-webfont862f.eot" />
+    <Content Include="Content\bookatailor.com\assets_newap\fonts\fontawesome-webfont862f.ttf" />
+    <Content Include="Content\bookatailor.com\assets_newap\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\bookatailor.com\assets_newap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bookatailor.com\assets_newap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\bookatailor.com\assets_newap\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="Content\bookatailor.com\assets_newap\fonts\lato-black-webfont.eot" />
+    <Content Include="Content\bookatailor.com\assets_newap\fonts\lato-black-webfont.ttf" />
+    <Content Include="Content\bookatailor.com\assets_newap\fonts\lato-black-webfontd41d.eot" />
+    <Content Include="Content\bookatailor.com\ClanOT-Black.eot" />
+    <Content Include="Content\bookatailor.com\ClanOT-Black.ttf" />
+    <Content Include="Content\bookatailor.com\ClanOT-Blackd41d.eot" />
+    <Content Include="Content\bookatailor.com\ClanOT-Bold.eot" />
+    <Content Include="Content\bookatailor.com\ClanOT-Bold.ttf" />
+    <Content Include="Content\bookatailor.com\ClanOT-Boldd41d.eot" />
+    <Content Include="Content\bookatailor.com\ClanOT-Book.eot" />
+    <Content Include="Content\bookatailor.com\ClanOT-Book.ttf" />
+    <Content Include="Content\bookatailor.com\ClanOT-Bookd41d.eot" />
+    <Content Include="Content\bookatailor.com\ClanOT-Medium.eot" />
+    <Content Include="Content\bookatailor.com\ClanOT-Medium.ttf" />
+    <Content Include="Content\bookatailor.com\ClanOT-Mediumd41d.eot" />
+    <Content Include="Content\bookatailor.com\ClanOT-News.eot" />
+    <Content Include="Content\bookatailor.com\ClanOT-News.ttf" />
+    <Content Include="Content\bookatailor.com\ClanOT-Newsd41d.eot" />
+    <Content Include="Content\bookatailor.com\ClanOT-Thin.eot" />
+    <Content Include="Content\bookatailor.com\ClanOT-Thin.ttf" />
+    <Content Include="Content\bookatailor.com\ClanOT-Thind41d.eot" />
+    <Content Include="Content\bookatailor.com\ClanOT-Ultra.eot" />
+    <Content Include="Content\bookatailor.com\ClanOT-Ultra.ttf" />
+    <Content Include="Content\bookatailor.com\ClanOT-Ultrad41d.eot" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Black.eot" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Black.ttf" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Blackd41d.eot" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Bold.eot" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Bold.ttf" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Boldd41d.eot" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Book.eot" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Book.ttf" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Bookd41d.eot" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Medium.eot" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Medium.ttf" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Mediumd41d.eot" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-News.eot" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-News.ttf" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Newsd41d.eot" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Thin.eot" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Thin.ttf" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Thind41d.eot" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Ultra.eot" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Ultra.ttf" />
+    <Content Include="Content\bookatailor.com\css\ClanOT-Ultrad41d.eot" />
+    <Content Include="Content\bookatailor.com\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\bookatailor.com\fonts\fontawesome-webfonte0a5.eot" />
+    <Content Include="Content\bookatailor.com\fonts\fontawesome-webfonte0a5.ttf" />
+    <Content Include="Content\bookatailor.com\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bookatailor.com\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\bookatailor.com\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\font\revicons90c6.eot" />
+    <Content Include="Content\bookatailor.com\lib\rs-plugin\font\revicons90c6.ttf" />
+    <Content Include="Content\hts-cache\doit.log" />
+    <Content Include="Content\hts-cache\new.zip" />
+    <Content Include="Content\hts-cache\old.zip" />
+    <Content Include="Content\hts-cache\winprofile.ini" />
+    <Content Include="Content\www.tailorspoint.com\assert\fonts\glyphicons-halflings-regular.html.readme" />
+    <None Include="packages.config" />
+    <Content Include="Views\Shared\_MyLayout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51296</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51296/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

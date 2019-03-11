@@ -1,0 +1,1615 @@
+<!doctype html>
+	<!-- Google Code for Lead Analytics Page -->
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-54236907-1', 'auto');
+	  ga('send', 'pageview');
+	
+	</script>
+<html class="no-js" lang="">
+    
+<!-- Mirrored from bookatailor.com/franchise.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Mar 2019 19:58:41 GMT -->
+<head>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','../connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '140770069701389');
+fbq('track', "PageView");</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=140770069701389&amp;ev=PageView&amp;noscript=1"
+/></noscript>
+	
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Bookatailor</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">        
+        <link rel="stylesheet" href="css/bootstrap_batnew.min.css">
+         <link rel="stylesheet" href="new.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/owl.carousel_batnew.css">
+        <link rel="stylesheet" href="css/owl.theme.css">
+        <link rel="stylesheet" href="css/owl.transitions.css">
+        <link rel="stylesheet" href="css/animate_batnew.css">
+        <link rel="stylesheet" href="css/img-zoom/jquery.simpleLens.css">
+        <link rel="stylesheet" href="css/fancybox/jquery.fancybox.css">
+        <link rel="stylesheet" href="css/slicknav_batnew.css">
+        <link rel="stylesheet" href="css/normalize_batnew.css">
+		<link rel="stylesheet" type="text/css" href="lib/rs-plugin/css_batnew/settings.css" media="screen" />			
+        <link rel="stylesheet" href="css/main_batnew.css">  <link rel="stylesheet" href="style1.css">
+         <link rel="stylesheet" href="mobile.css">
+        <link rel="stylesheet" href="css/responsive_batnew.css">
+        
+      
+	<link rel="stylesheet" type="text/css" href="demo/css/prism_batnew.css" />
+	<link rel="stylesheet" type="text/css" href="demo/css/calendar-style_batnew.css" />
+	<link rel="stylesheet" type="text/css" href="src_batnew/css/pignose.calendar.css" />
+	<script type="text/javascript" src="demo/js_batnew/jquery.latest.min.js"></script>
+	<script type="text/javascript" src="demo/js_batnew/bootstrap.min.js"></script>
+	<script type="text/javascript" src="demo/js_batnew/prism.min.js"></script>
+	<script type="text/javascript" src="vender_batnew/moment.min.js"></script>
+	<script type="text/javascript" src="src_batnew/js/pignose.calendar.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    //Disable cut copy paste
+    $('body').bind('cut copy paste', function (e) {
+        e.preventDefault();
+    });
+   
+    //Disable mouse right click
+    $("body").on("contextmenu",function(e){
+        return false;
+    });
+});
+</script>
+    
+	<script type="text/javascript">
+	  jQuery(function($){
+		loadActiveShowrooms();
+		//jQuery('.phone_us').mask('(000) 000-0000');
+		
+	 });
+	
+	 function loadActiveShowrooms()
+	 {
+	   if (window.XMLHttpRequest)
+		  {// code for IE7+, Firefox, Chrome, Opera, Safari
+		  xmlhttp=new XMLHttpRequest();
+		  }
+		else
+		  {// code for IE6, IE5
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		  }
+			xmlhttp.onreadystatechange=function()
+		  {
+		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{  
+				document.getElementById("divActiveShowrooms").innerHTML=xmlhttp.responseText;
+			}
+		  }
+		
+		xmlhttp.open("GET.html",'_showrooms.html',true);
+		xmlhttp.send(); 
+	  }	
+	  
+	  
+	
+	  function gotoAppointmentDate()
+	  {
+	  	  document.getElementById('showroomError').innerHTML = '';
+		  document.getElementById("step1").style.display="none";
+		  document.getElementById("step2").style.display="none";
+		  document.getElementById("step3").style.display="none";
+		  document.getElementById("step4").style.display="none";
+		  document.getElementById("step5").style.display="none";
+		  document.getElementById("step6").style.display="none";
+		  document.getElementById("step7").style.display="none";
+		  document.getElementById("step8").style.display="none";
+		  $("#step2").fadeIn();
+	  }
+	  
+	function selectShowroom(id,nextid,bar)
+	{
+	  var shrmLocation = $('input[name=appointment_location]:checked', '#frmAppointment').val();
+	  if((shrmLocation == "") || (shrmLocation == undefined) )
+	  {
+	 	 document.getElementById('showroomError').innerHTML = 'Please select a showroom';
+		 return false;
+	  }
+	  else
+	  {
+	  	  document.getElementById('showroomError').innerHTML = '';
+		  document.getElementById("step1").style.display="none";
+		    document.getElementById("step2").style.display="none";
+		    document.getElementById("step3").style.display="none";
+		    document.getElementById("step4").style.display="none";
+		    document.getElementById("step5").style.display="none";
+	        document.getElementById("step6").style.display="none";
+	        document.getElementById("step7").style.display="none";
+		  document.getElementById("step8").style.display="none";
+	        $("#"+nextid).fadeIn();
+		 // document.getElementById(bar).style.backgroundColor="#58585a";
+	  }	 
+	}	
+	  
+	  function show_appointment_time(id,nextid,bar)
+	  {
+		  document.getElementById("step1").style.display="none";
+		    document.getElementById("step2").style.display="none";
+		    document.getElementById("step3").style.display="none";
+		    document.getElementById("step4").style.display="none";
+		    document.getElementById("step5").style.display="none";
+	        document.getElementById("step6").style.display="none";
+	        document.getElementById("step7").style.display="none";
+		  document.getElementById("step8").style.display="none";
+	        $("#"+nextid).fadeIn();
+		  //document.getElementById(bar).style.backgroundColor="#58585a";
+	  
+		   var appointment_location = $('input[name=appointment_location]:checked').val();
+		   var appointment_date =  document.getElementById('appointment_date').value;		  
+		   var time_period = $('input[name=rdTimePeriod]:checked').val();	
+		   
+		   if (window.XMLHttpRequest)
+		   {// code for IE7+, Firefox, Chrome, Opera, Safari
+			  xmlhttp=new XMLHttpRequest();
+		   }
+		   else
+		   {// code for IE6, IE5
+			  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			  }
+				xmlhttp.onreadystatechange=function()
+			  {
+			  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+				{  
+					document.getElementById("divAppointmentTime").innerHTML=xmlhttp.responseText;
+				}
+			}
+			xmlhttp.open("GET.html",'_appointment-slots7a2c.html?appointment_location='+appointment_location+'&appointment_date='+appointment_date+'&time_period='+time_period,true);
+			xmlhttp.send(); 
+	}
+
+
+
+	function showCustomerProfile(id,nextid,bar)
+	{		
+		document.getElementById("step1").style.display="none";
+		    document.getElementById("step2").style.display="none";
+		    document.getElementById("step3").style.display="none";
+		    document.getElementById("step4").style.display="none";
+		    document.getElementById("step5").style.display="none";
+	        document.getElementById("step6").style.display="none";
+	        document.getElementById("step7").style.display="none";
+		  document.getElementById("step8").style.display="none";
+	        $("#"+nextid).fadeIn();
+	  //document.getElementById(bar).style.backgroundColor="#58585a";
+	   
+	   
+	   if (window.XMLHttpRequest)
+	   {// code for IE7+, Firefox, Chrome, Opera, Safari
+		  xmlhttp=new XMLHttpRequest();
+	   }
+	   else
+	   {// code for IE6, IE5
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		  }
+			xmlhttp.onreadystatechange=function()
+		  {
+		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{  
+				document.getElementById("divCustomerProfile").innerHTML=xmlhttp.responseText;
+			}
+		}
+		xmlhttp.open("GET.html",'_returning-customerea4e.html?eml=&amp;ph=',true);
+		xmlhttp.send(); 
+	}   
+
+	function validateReturningCustomerInfo(id,nextid,bar)
+	{		
+		var regEmail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+		
+		if((regEmail.test(jQuery("#retEmail").val()) == false) && ((jQuery("#retPhone").val() == "Phone Number") || (jQuery("#retPhone").val() == "")))
+		{
+		
+			$('#retPhone').css({
+				"border" : "2px solid #FF0000"
+			});
+			
+			$('#retEmail').css({
+				"border" : "2px solid #FF0000"
+			});
+			
+			document.getElementById('retCustomerError').innerHTML = 'Please enter a valid email address or phone number';
+			return false;
+		}
+		else
+		{
+			$('#retPhone').css({
+				"border" : "2px solid #000000"
+			}); 
+			
+			$('#retEmail').css({
+				"border" : "2px solid #000000"
+			}); 
+			
+		    document.getElementById("step1").style.display="none";
+		    document.getElementById("step2").style.display="none";
+		    document.getElementById("step3").style.display="none";
+		    document.getElementById("step4").style.display="none";
+		    document.getElementById("step5").style.display="none";
+	        document.getElementById("step6").style.display="none";
+	        document.getElementById("step7").style.display="none";
+		  document.getElementById("step8").style.display="none";
+	        $("#"+nextid).fadeIn();
+		  //document.getElementById(bar).style.backgroundColor="#58585a";
+	  	    document.getElementById('retCustomerError').innerHTML = '';	
+		    if(regEmail.test(jQuery("#retEmail").val()) == false)
+			{
+				var emailValue = "-Email ID-";
+			}
+			else
+			{
+				var emailValue = jQuery("#retEmail").val();
+			}
+			
+			if((jQuery("#retPhone").val() == "Phone Number") || (jQuery("#retPhone").val() == ""))
+			{
+				var phoneValue = "-Phone No-";
+			} 
+			else
+			{
+				var phoneValue = jQuery("#retPhone").val();
+			}	
+		   
+		   if (window.XMLHttpRequest)
+		   {// code for IE7+, Firefox, Chrome, Opera, Safari
+			  xmlhttp=new XMLHttpRequest();
+		   }
+		   else
+		   {// code for IE6, IE5
+			  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			  }
+				xmlhttp.onreadystatechange=function()
+			  {
+			  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+				{  
+					document.getElementById("divReturningCustomer").innerHTML=xmlhttp.responseText;
+				}
+			}
+			//alert('_returning-customer.cfm?eml='+emailValue+'&ph='+phoneValue);
+			xmlhttp.open("GET.html",'_returning-customerde7d.html?eml='+emailValue+'&ph='+phoneValue,true);
+			xmlhttp.send(); 
+		}
+	}   
+
+
+	function validateAppointmentInputs()
+	{
+	  	var regEmail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+		if((jQuery("#appointment_firstname").val() == "") || (jQuery("#appointment_firstname").val() == "First Name"))
+		{
+			$('#appointment_firstname').css({
+				"border" : "2px solid #FF0000"
+			});
+		}
+		else  
+		{
+			$('#appointment_firstname').css({
+				"border" : "2px solid #000000"
+			}); 
+		}
+		
+		if((jQuery("#appointment_lastname").val() == "") || (jQuery("#appointment_lastname").val() == "Last Name"))
+		{
+			$('#appointment_lastname').css({
+				"border" : "2px solid #FF0000"
+			});
+		}
+		else  
+		{
+			$('#appointment_lastname').css({
+				"border" : "2px solid #000000"
+			}); 
+		}
+		
+		if(regEmail.test(jQuery("#appointment_email").val()) == false)
+		{
+			$('#appointment_email').css({
+				"border" : "2px solid #FF0000"
+			});
+		}
+		else  
+		{
+			$('#appointment_email').css({
+				"border" : "2px solid #000000"
+			}); 
+		}
+		
+		if((jQuery("#appointment_phone").val() == "") || (jQuery("#appointment_phone").val() == "Phone Number"))
+		{
+			$('#appointment_phone').css({
+				"border" : "2px solid #FF0000"
+			});
+		}
+		else  
+		{
+			$('#appointment_phone').css({
+				"border" : "2px solid #000000"
+			}); 
+		}
+		
+		
+		if((jQuery("#appointment_firstname").val() == "") || (jQuery("#appointment_lastname").val() == "") || (jQuery("#appointment_phone").val() == "") || (jQuery("#appointment_firstname").val() == "First Name") || (jQuery("#appointment_lastname").val() == "Last Name") || (regEmail.test(jQuery("#appointment_email").val()) == false) || (jQuery("#appointment_phone").val() == "Phone Number") )
+		{
+			document.getElementById('appointmentError').innerHTML = 'Missing Required Information';
+			return false;
+		}
+		else
+		{
+			//alert("Filled All The details - submitting page");
+			document.getElementById('appointmentError').innerHTML = '';
+			var appointment_location = $('input[name=appointment_location]:checked').val();
+			var appointment_time = $('input[name=appointment_time]:checked').val();
+		   
+			var dataString = 'appointmentArgs=' +  jQuery("#appointment_firstname").val() + '|' + jQuery("#appointment_lastname").val() + '|' + jQuery("#appointment_phone").val() + '|' + jQuery("#appointment_email").val() + '|' + jQuery("#appointment_date").val() + '|' + appointment_time + '|' + appointment_location + '|' + 'Deal';
+			
+			//document.forms["frmAppointment"].submit();
+		  jQuery.ajax({
+			type: "POST",
+			url: "appointment_email.cfm",
+			data: dataString,
+			cache: false,
+			success: function(userCount)
+			{
+				document.getElementById("step1").style.display="none";
+				document.getElementById("step2").style.display="none";
+				document.getElementById("step3").style.display="none";
+				document.getElementById("step4").style.display="none";
+				document.getElementById("step5").style.display="none";
+				document.getElementById("step6").style.display="none";
+				document.getElementById("step7").style.display="none";
+		  document.getElementById("step8").style.display="block";
+				return false;
+			 }
+		   });
+		}	
+	}
+	   
+	
+ 	function validateAppointmentInputs2()
+	{
+	  	var regEmail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+		if((jQuery("#appointment_firstname2").val() == "") || (jQuery("#appointment_firstname2").val() == "First Name"))
+		{
+			$('#appointment_firstname2').css({
+				"border" : "2px solid #FF0000"
+			});
+		}
+		else  
+		{
+			$('#appointment_firstname2').css({
+				"border" : "2px solid #000000"
+			}); 
+		}
+		
+		if((jQuery("#appointment_lastname2").val() == "") || (jQuery("#appointment_lastname2").val() == "Last Name"))
+		{
+			$('#appointment_lastname2').css({
+				"border" : "2px solid #FF0000"
+			});
+		}
+		else  
+		{
+			$('#appointment_lastname2').css({
+				"border" : "2px solid #000000"
+			}); 
+		}
+		
+		if(regEmail.test(jQuery("#appointment_email2").val()) == false)
+		{
+			$('#appointment_email2').css({
+				"border" : "2px solid #FF0000"
+			});
+		}
+		else  
+		{
+			$('#appointment_email2').css({
+				"border" : "2px solid #000000"
+			}); 
+		}
+		
+		if((jQuery("#appointment_phone2").val() == "") || (jQuery("#appointment_phone2").val() == "Phone Number"))
+		{
+			$('#appointment_phone2').css({
+				"border" : "2px solid #FF0000"
+			});
+		}
+		else  
+		{
+			$('#appointment_phone2').css({
+				"border" : "2px solid #000000"
+			}); 
+		}
+		
+		
+		
+		if((jQuery("#appointment_firstname2").val() == "") || (jQuery("#appointment_lastname2").val() == "") || (jQuery("#appointment_phone2").val() == "") || (jQuery("#appointment_firstname2").val() == "First Name") || (jQuery("#appointment_lastname2").val() == "Last Name") || (regEmail.test(jQuery("#appointment_email2").val()) == false) || (jQuery("#appointment_phone2").val() == "Phone Number") )
+		{
+			document.getElementById('appointmentError2').innerHTML = 'Missing Required Information';
+			return false;
+		}
+		else
+		{
+			//alert("Filled All The details - submitting page");
+			document.getElementById('appointmentError2').innerHTML = '';
+			//document.forms["frmAppointment"].submit();
+			var appointment_location = $('input[name=appointment_location]:checked').val();
+			var appointment_time = $('input[name=appointment_time]:checked').val();
+		   
+			var dataString = 'appointmentArgs=' +  jQuery("#appointment_firstname2").val() + '|' + jQuery("#appointment_lastname2").val() + '|' + jQuery("#appointment_phone2").val() + '|' + jQuery("#appointment_email2").val() + '|' + jQuery("#appointment_date").val() + '|' + appointment_time + '|' + appointment_location + '|' + 'Deal';
+			
+			//document.forms["frmAppointment"].submit();
+		  jQuery.ajax({
+			type: "POST",
+			url: "appointment_email.cfm",
+			data: dataString,
+			cache: false,
+			success: function(userCount)
+			{
+				document.getElementById("step1").style.display="none";
+				document.getElementById("step2").style.display="none";
+				document.getElementById("step3").style.display="none";
+				document.getElementById("step4").style.display="none";
+				document.getElementById("step5").style.display="none";
+				document.getElementById("step6").style.display="none";
+				document.getElementById("step7").style.display="none";
+		  document.getElementById("step8").style.display="block";
+				return false;
+			 }
+		   });
+		}	
+	}
+	
+	function show_next(id,nextid,bar)
+	{
+	  document.getElementById("step1").style.display="none";
+		    document.getElementById("step2").style.display="none";
+		    document.getElementById("step3").style.display="none";
+		    document.getElementById("step4").style.display="none";
+		    document.getElementById("step5").style.display="none";
+	        document.getElementById("step6").style.display="none";
+	        document.getElementById("step7").style.display="none";
+		  document.getElementById("step8").style.display="none";
+	        $("#"+nextid).fadeIn();
+	 // document.getElementById(bar).style.backgroundColor="#58585a";
+	}
+	
+									 
+	function show_prev(previd,bar)
+	{
+	  document.getElementById("step1").style.display="none";
+	  document.getElementById("step2").style.display="none";
+	  document.getElementById("step3").style.display="none";
+	  document.getElementById("step4").style.display="none";
+	  document.getElementById("step5").style.display="none";
+	  document.getElementById("step6").style.display="none";
+	  document.getElementById("step7").style.display="none";
+		  document.getElementById("step8").style.display="none";
+	
+	  $("#"+previd).fadeIn();
+	  //document.getElementById(bar).style.backgroundColor="#D8D8D8";
+	}
+   </script>
+   
+	<script type="text/javascript">
+	//<![CDATA[
+	$(function() {
+		$('.calendar').pignoseCalendar({
+			select: function(date, obj) {
+			document.getElementById("appointment_date").value = date[0].format('MM/DD/YYYY');
+			show_next('step2','step3','bar2');
+			// alert('date 1 = ' + date[0].format('MM/DD/YYYY'));
+				/* obj.calendar.parent().next().show().text('You selected ' + 
+				(date[0] === null? 'null':date[0].format('YYYY-MM-DD')) +
+				'.'); */
+			}
+		});
+
+		$('.input-calendar').pignoseCalendar({
+			buttons: true,
+		});
+		
+		var today = new Date();
+		var dd = today.getDate();
+		var mm = today.getMonth()+1; //January is 0!
+		
+		var yyyy = today.getFullYear();
+		if(dd<10){
+			dd='0'+dd
+		} 
+		if(mm<10){
+			mm='0'+mm
+		} 
+		var today = mm+'/'+dd+'/'+yyyy;
+		document.getElementById("appointment_date").value = today;
+		
+		
+		var $btn = $('.btn-calendar').pignoseCalendar({
+			modal: true,
+			buttons: true,
+			apply: function(date) {
+				$btn.next().show().text('You applied date ' + date + '.');
+			}
+		});
+
+		$('.calendar-dark').pignoseCalendar({
+			theme: 'dark',
+			select: function(date, obj) {
+				obj.calendar.parent().next().show().text('You selected ' + 
+				(date[0] === null? 'null':date[0].format('YYYY-MM-DD')) +
+				'.');
+			}
+		});
+
+		$('.multi-select-calendar').pignoseCalendar({
+			multiple: true,
+			select: function(date, obj) {
+				obj.calendar.parent().next().show().text('You selected ' + 
+					(date[0] === null? 'null':date[0].format('YYYY-MM-DD')) +
+					'~' +
+					(date[1] === null? 'null':date[1].format('YYYY-MM-DD')) +
+					'.');
+			}
+		});
+
+		$('.toggle-calendar').pignoseCalendar({
+			toggle: true,
+			select: function(date, obj) {
+				var $target = obj.calendar.parent().next().show().html('You selected ' + 
+				(date[0] === null? 'null':date[0].format('YYYY-MM-DD')) + 
+				'.' +
+				'<br /><br />' +
+				'<strong>Active dates</strong><br /><br />' +
+				'<div class="active-dates"></div>');
+
+				for(var idx in obj.storage.activeDates) {
+					var date = obj.storage.activeDates[idx];
+					if(typeof date !== 'string') {
+						continue;
+					}
+					$target.find('.active-dates').append('<span class="label label-default">' + date + '</span>');
+				}
+			}
+		});
+		
+		
+		$('.language-calendar').each(function() {
+			var $this = $(this);
+			var lang = $this.data('lang');
+			$this.pignoseCalendar({
+				lang: lang
+			});
+		});
+		
+	});
+	//]]>
+	</script>
+    
+	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script> 
+	  $(function () {
+		$('#myId').data('holder', $('#myId').attr('placeholder'));
+		$('#myId').focusin(function () {
+			$(this).attr('placeholder', '');
+		});
+		$('#myId').focusout(function () {
+			$(this).attr('placeholder', $(this).data('holder'));
+		});
+	  });
+	</script>
+    
+<style>
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+</style>
+    </head>
+       <body class="home-4">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+   
+	<div style="position:relative; width:100%; height:1px; margin-top:-40px;">
+<div class=" spls fx">
+                      <div class="header-top">
+                        <div class="shopping-cart">
+                          <div class="mini-cart-inner ">
+                          <a class="xicon cls"><img src="images-bat/cancel.png"></a>
+                            <div class="pick-box"><h3 class="widget-title" style="padding:0px; margin:10px 0 10px 0;">BOOK APPOINTMENT</h3></div>
+                            <div class="mcart-border">
+                             <div id="wrapper1">
+                              <form role="form" method="post" id="frmAppointment" 
+                               name="frmAppointment" action="http://bookatailor.com/appointment_action.cfm">
+                              <div id="step1">
+                               <!--- <h5>1. CHOOSE SHOWROOM LOCATION </h5> ---->
+                               
+                                <div id="showroomError" style="color:red;font-size:14px;font-weight:bold;
+                                  text-align:center;text-transform:uppercase;" ></div>
+                                <div class="radio-toolbar4" id="divActiveShowrooms"></div>
+                                <!--- <center><input type="button" value="Next"
+                                    onClick="selectShowroom('step1','step2','bar1');"></center> --->
+                              </div>
+                              
+                              <div id="step2">
+                                <!--- <h5>2. CHOOSE A DATE</h5> ---->
+                                 <input name="appointment_date" type="hidden" id="appointment_date" /> 
+                                 <div class="calendar"></div>
+                                 <center> <input type="button" value="Previous"  onClick="show_prev('step1','bar1');"
+                                  style="background-color:#333333;"> <!--- &nbsp;&nbsp;<input type="button" value="Next" 
+                                    onClick="show_next('step2','step3','bar2');">  ----> </center>
+                                </div>
+                        
+                                <div id="step3">
+                                 <!--- <h5>3. SELECT TIME OF DAY</h5> ---->
+                                 <div class="radio-toolbar1">
+                                  <input type="radio" id="rdTimePeriod1" name="rdTimePeriod" value="8:00 AM|12:00 PM"
+                                   onClick="show_appointment_time('step3','step4','bar2');">
+                                  <label for="rdTimePeriod1">MORNING</label>
+                                  <input type="radio" id="rdTimePeriod2" name="rdTimePeriod" value="12:00 PM|3:00 PM"
+                                   onClick="show_appointment_time('step3','step4','bar2');">
+                                  <label for="rdTimePeriod2">LUNCH</label>
+                                  <input type="radio" id="rdTimePeriod3" name="rdTimePeriod" value="3:00 PM|5:00 PM"
+                                   onClick="show_appointment_time('step3','step4','bar2');">
+                                  <label for="rdTimePeriod3">AFTERNOON</label>
+                                  <input type="radio" id="rdTimePeriod4" name="rdTimePeriod" value="5:00 PM|11:00 PM"
+                                   onClick="show_appointment_time('step3','step4','bar2');">
+                                  <label for="rdTimePeriod4">EVENING</label>
+                                 </div>
+                                 <center> <input type="button" value="Previous" onClick="show_prev('step2','bar2');"
+                                   style="background-color:#333333;"> <!--- &nbsp;&nbsp;<input type="button" value="Next"
+                                    onClick="show_appointment_time('step3','step4','bar2');"> ---> </center>
+                                 </div>
+                  
+                  
+                                <div id="step4">
+                                 <!--- <h5>4. APPOINTMENT TIME</h5> ---->
+                                 <div class="radio-toolbar3" id="divAppointmentTime"></div>
+                                </div>
+                  
+                  				<div id="step5">
+                                  <div class="radio-toolbar3" id="divCustomerProfile"></div>
+                                </div>
+                                
+                               <div id="step6"> 
+                                 <div id="retCustomerError" style="color:red;font-size:15px;font-weight:bold;
+                                  text-align:center;text-transform:uppercase;" ></div>
+                                <input type="text" placeholder='Email ID' name="retEmail" id="retEmail">
+                                <center> <strong> OR</strong></center>
+                                 <input type="text" placeholder='Phone Number' class="phone_us"
+                                  name="retPhone" id="retPhone" style="margin-top:15px;">
+                                <center> <input type="button" value="Previous" onClick="show_prev('step5','bar2');" 
+                                style="background-color:#333333;">&nbsp;&nbsp;<input type="button" value="Next"
+                                 onClick="validateReturningCustomerInfo('step6','step7','bar2');" ></center>
+                              </div>
+                  
+                  
+                              <div id="step7">
+                                <div class="radio-toolbar3" id="divReturningCustomer"></div>
+                              </div>
+                              
+                              <div id="step8">
+                                <div class="col-xs-12 col-sm-12" style="border:#FF6600 3px solid; margin-bottom:25px;">
+                                  <center><div style="color:#21b022;font-size:25px;text-transform:uppercase;
+                                   padding-bottom:15px;padding-top:15px;">Thank You</div>
+                                 <div style="font-size:16px;text-transform:uppercase;padding-bottom:15px;">
+                                  You will receive an email confirmation shortly.</div>
+                                </div>
+                               </div>
+                              </form>
+                            </div>
+                           </div>
+                          </div>
+                        </div>
+						
+						
+					  <div class="top-account" style="z-index:1001;">
+							<div class="acc-form">
+                            <a class="xicon cls"><img src="images-bat/cancel.png"></a>
+								<div class="pick-box"><h3 class="widget-title">SCHEDULE A PICKUP </h3></div>
+                                 <div id="wrapper1">
+                                  <form role="form" method="post" id="frmPickup" name="frmPickup" action="http://bookatailor.com/pickup_action.cfm">
+                                  <div id="PickupStep1">
+									<p class="login-username" style="margin:0px; padding:0px;"> 
+									  <input type="text" placeholder="Enter your email address"
+                                       name="pickup_email" id="pickup_email">
+									</p>
+                                    <h6 style="margin:20px 0 0 0;">OR</h6>
+									<p class="login-password"> 
+										<input type="text" placeholder="Enter your phone number"
+                                         name="pickup_phone" id="pickup_phone" class="phone_us">
+									</p>
+									<div id="pickupError" style="color:red;font-size:15px;font-weight:bold;
+                                     text-align:center;text-transform:uppercase;" ></div> 
+									   <!--- <input type="submit" value="SCHEDULE NOW" class="button-primary"
+                                         onClick="return validatePickupInputs();">  --->
+                                       <center><input type="button" value="Next" onClick="return validatePickupInputs();"></center>   
+									</p>
+                                  </div>     
+                                   
+                                  <div id="PickupStep2">
+                                   <!--- <h5>1. CHOOSE SHOWROOM LOCATION </h5> ---->
+                                    <div class="radio-toolbar4" id="divActivePickupShowrooms"></div>
+                                  </div>
+                                  
+                                  <div id="PickupStep3">
+                                    <!--- <h5>2. CHOOSE A DATE</h5> ---->
+                                     <input name="pickup_date" type="hidden" id="pickup_date" /> 
+                                     <div class="pickupCalendar"></div>
+                                     <center> <input type="button" value="Previous"  onClick="show_prev_pickup('PickupStep2','bar2');"
+                                      style="background-color:#333333;"> <!--- &nbsp;&nbsp;<input type="button" value="Next" 
+                                        onClick="show_next('step2','step3','bar2');">  ----> </center>
+                                  </div>
+                            
+                                  <div id="PickupStep4">
+                                     <!--- <h5>3. SELECT TIME OF DAY</h5> ---->
+                                     <div class="radio-toolbar1">
+                                      <input type="radio" id="rdPickupTimePeriod1" name="rdPickupTimePeriod" value="8:00 AM|12:00 PM"
+                                       onClick="show_pickup_time('PickupStep4','PickupStep5','bar2');">
+                                      <label for="rdPickupTimePeriod1">MORNING</label>
+                                      <input type="radio" id="rdPickupTimePeriod2" name="rdPickupTimePeriod" value="12:00 PM|3:00 PM"
+                                       onClick="show_pickup_time('PickupStep4','PickupStep5','bar2');">
+                                      <label for="rdPickupTimePeriod2">LUNCH</label>
+                                      <input type="radio" id="rdPickupTimePeriod3" name="rdPickupTimePeriod" value="3:00 PM|5:00 PM"
+                                       onClick="show_pickup_time('PickupStep4','PickupStep5','bar2');">
+                                      <label for="rdPickupTimePeriod3">AFTERNOON</label>
+                                      <input type="radio" id="rdPickupTimePeriod4" name="rdPickupTimePeriod" value="5:00 PM|11:00 PM"
+                                       onClick="show_pickup_time('PickupStep4','PickupStep5','bar2');">
+                                      <label for="rdPickupTimePeriod4">EVENING</label>
+                                     </div>
+                                     <center> <input type="button" value="Previous" onClick="show_prev_pickup('PickupStep3','bar3');"
+                                       style="background-color:#333333;"> <!--- &nbsp;&nbsp;<input type="button" value="Next"
+                                        onClick="show_pickup_time('step3','step4','bar2');"> ---> </center>
+                                     </div>
+                      
+                                    <div id="PickupStep5">
+                                     <!--- <h5>4. APPOINTMENT TIME</h5> ---->
+                                     <div class="radio-toolbar3" id="divPickupTime"></div>
+                                    </div>
+								</form>
+                                
+                                
+                                <script src="js/jquery.mask.min.js" type="text/javascript"></script>
+                                <script language="javascript" type="text/javascript">
+									function validatePickupInputs()
+									{	
+										var regEmail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+										
+										if( ((jQuery("#pickup_phone").val() == "") || (jQuery("#pickup_phone").val() == "Phone Number")) &&  (regEmail.test(jQuery("#pickup_email").val()) == false))
+										{
+											document.getElementById('pickupError').innerHTML = 'Missing Required Information';
+											$('#pickup_email').css({
+												"border" : "2px solid #FF0000"
+											});
+											
+											$('#pickup_phone').css({
+												"border" : "2px solid #FF0000"
+											});
+											return false;
+										}
+										else
+										{
+											document.getElementById('pickupError').innerHTML = '';
+											loadActivePickupShowrooms(jQuery("#pickup_email").val(), jQuery("#pickup_phone").val());
+										}
+									}	
+									
+									function TrimInputs(str)
+									{
+									  return str.replace(/^\s+|\s+$/g,'');
+									}
+									
+									function submitPickupInfo()
+									{
+									  document.forms["frmPickup"].submit();
+									}
+									
+									
+									function show_prev_pickup(previd,bar)
+									{
+									  document.getElementById("PickupStep1").style.display="none";
+									  document.getElementById("PickupStep2").style.display="none";
+									  document.getElementById("PickupStep3").style.display="none";
+									  document.getElementById("PickupStep4").style.display="none";
+									  document.getElementById("PickupStep5").style.display="none";
+									  $("#"+previd).fadeIn();
+									}
+									
+									
+                                     function loadActivePickupShowrooms(pickup_email, pickup_phone)
+                                     {
+                                       if (window.XMLHttpRequest)
+                                          {// code for IE7+, Firefox, Chrome, Opera, Safari
+                                          xmlhttp=new XMLHttpRequest();
+                                          }
+                                        else
+                                          {// code for IE6, IE5
+                                          xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                                          }
+                                            xmlhttp.onreadystatechange=function()
+                                          {
+                                          if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                                            {  
+                                                document.getElementById("divActivePickupShowrooms").innerHTML=xmlhttp.responseText;
+												show_prev_pickup('PickupStep2','bar2');
+                                            }
+                                          }
+                                        
+                                        xmlhttp.open("GET.html",'_showrooms-pickup9a71.html?pickup_email='+pickup_email+'&pickup_phone='+pickup_phone,true);
+                                        xmlhttp.send(); 
+                                      }	
+									  
+									  
+									  function gotoPickupDate()
+									  {
+										  document.getElementById("PickupStep1").style.display="none";
+										  document.getElementById("PickupStep2").style.display="none";
+										  document.getElementById("PickupStep3").style.display="none";
+										  document.getElementById("PickupStep4").style.display="none";
+										  document.getElementById("PickupStep5").style.display="none";
+										  $("#PickupStep3").fadeIn();
+									  }
+									  
+									  function show_pickup_time(id,nextid,bar)
+									  {
+										   var pickup_location = $('input[name=pickup_location]:checked').val();
+										   var pickup_date =  document.getElementById('pickup_date').value;		  
+										   var time_period = $('input[name=rdPickupTimePeriod]:checked').val();	
+										   
+										   if (window.XMLHttpRequest)
+										   {// code for IE7+, Firefox, Chrome, Opera, Safari
+											  xmlhttp=new XMLHttpRequest();
+										   }
+										   else
+										   {// code for IE6, IE5
+											  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+											  }
+												xmlhttp.onreadystatechange=function()
+											  {
+											  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+												{  
+													document.getElementById("divPickupTime").innerHTML=xmlhttp.responseText;
+													show_prev_pickup('PickupStep5','bar2');
+												}
+											}
+											xmlhttp.open("GET.html",'_pickup-slotsd6d4.html?pickup_location='+pickup_location+'&pickup_date='+pickup_date+'&time_period='+time_period,true);
+											xmlhttp.send(); 
+									 }
+										
+										
+                                      //<![CDATA[
+									 $(function() {
+										$('.pickupCalendar').pignoseCalendar({
+											select: function(date, obj) {
+											document.getElementById("pickup_date").value = date[0].format('MM/DD/YYYY');
+											show_prev_pickup('PickupStep4','bar1');
+											}
+										});
+										
+										$('.input-calendar').pignoseCalendar({
+											buttons: true,
+										});
+										
+										var today = new Date();
+										var dd = today.getDate();
+										var mm = today.getMonth()+1; //January is 0!
+										
+										var yyyy = today.getFullYear();
+										if(dd<10){
+											dd='0'+dd
+										} 
+										if(mm<10){
+											mm='0'+mm
+										} 
+										var today = mm+'/'+dd+'/'+yyyy;
+										document.getElementById("pickup_date").value = today;
+										
+										
+										var $btn = $('.btn-calendar').pignoseCalendar({
+											modal: true,
+											buttons: true,
+											apply: function(date) {
+												$btn.next().show().text('You applied date ' + date + '.');
+											}
+										});
+								
+										$('.calendar-dark').pignoseCalendar({
+											theme: 'dark',
+											select: function(date, obj) {
+												obj.calendar.parent().next().show().text('You selected ' + 
+												(date[0] === null? 'null':date[0].format('YYYY-MM-DD')) +
+												'.');
+											}
+										});
+								
+										$('.multi-select-calendar').pignoseCalendar({
+											multiple: true,
+											select: function(date, obj) {
+												obj.calendar.parent().next().show().text('You selected ' + 
+													(date[0] === null? 'null':date[0].format('YYYY-MM-DD')) +
+													'~' +
+													(date[1] === null? 'null':date[1].format('YYYY-MM-DD')) +
+													'.');
+											}
+										});
+								
+										$('.toggle-calendar').pignoseCalendar({
+											toggle: true,
+											select: function(date, obj) {
+												var $target = obj.calendar.parent().next().show().html('You selected ' + 
+												(date[0] === null? 'null':date[0].format('YYYY-MM-DD')) + 
+												'.' +
+												'<br /><br />' +
+												'<strong>Active dates</strong><br /><br />' +
+												'<div class="active-dates"></div>');
+								
+												for(var idx in obj.storage.activeDates) {
+													var date = obj.storage.activeDates[idx];
+													if(typeof date !== 'string') {
+														continue;
+													}
+													$target.find('.active-dates').append('<span class="label label-default">' + date + '</span>');
+												}
+											}
+										});
+										
+										
+										$('.language-calendar').each(function() {
+											var $this = $(this);
+											var lang = $this.data('lang');
+											$this.pignoseCalendar({
+												lang: lang
+											});
+										});
+										
+									 });
+									 //]]>
+									
+									
+									  jQuery('.phone_us').mask('(000) 000-0000');
+									  show_prev_pickup('PickupStep1','bar1');
+									  
+								</script>
+							</div>
+						</div>
+						
+						<div class="log_top-account" style="">
+							<div class="acc-form">
+							
+    
+    
+			<div >	
+				<div class="faq-accordion" style="z-index:1000;">
+                <a class="xicon cls"><img src="images-bat/cancel.png"></a>
+                <h3 class="widget-title">Customer Login </h3>
+						<form method="post" action="#">
+									<p class="login-username" style="margin:0px; padding:0px;"> 
+									
+										<input type="text" placeholder="Enter your email address">
+									</p>
+                                   <br>
+
+									<p class="login-password"> 
+									
+										<input type="text" placeholder="Enter your password">
+									</p>
+									
+									<p class="login-submit" style="margin: 20px 0 0 0; padding:0px;"> 
+										<input type="submit" value="Login" class="button-primary">
+									</p>  
+								</form>
+				</div>
+				</div>
+							</div>
+						</div>
+					</div>
+	</div> </div>
+	<div class="header-area" >
+    
+    <div id="test">
+    
+    <div class="top-headder">
+     <div class="top-left">
+     
+     <ul class="social-icons">
+                        <li>
+								<a class="instagram" target="_blank" href="https://www.instagram.com/bookatailor/" style="background-color:#eeeeee; color:#989899;">
+									<i class="fa fa-instagram"></i>
+								</a>
+							</li>
+							<li>
+								<a class="color-tooltip facebook" target="_blank" href="https://www.facebook.com/bookatailor"  style="background-color:#eeeeee; color:#989899;">
+									<i class="fa fa-facebook"></i>
+								</a>
+							</li>
+                            
+                            							<li>
+								<a class="color-tooltip pinterest" target="_blank" href="https://www.pinterest.com/bookatailor/"  style="background-color:#eeeeee; color:#989899;">
+									<i class="fa fa-pinterest-square"></i>
+								</a>
+							</li>
+							<li>
+								<a class="color-tooltip twitter" target="_blank"  href="https://twitter.com/BookATailor"  style="background-color:#eeeeee; color:#989899;">
+									<i class="fa fa-twitter"></i>
+								</a>
+							</li>
+
+							<li>
+								<a class="color-tooltip youtube" target="_blank" href="https://www.youtube.com/channel/UC5R2SMJ9Phk3K2iM92HgOAQ"  style="background-color:#eeeeee; color:#989899;">
+									<i class="fa fa-youtube"></i>
+								</a>
+							</li>
+
+						</ul> </div>
+      <div class="top-right">
+      
+      <ul>
+      
+      <li class=" pick-clr"><a href="pickup/index.html" style="color:white;"><i class="lifa1"><img src="images-bat/spu.png"></i>Schedule Pick-up </a></li> <li class="book-clr"><a href="deal/index.html" style="color:white;"><i class="lifa1"><img src="images-bat/bka.png"></i>Book Appointment</a></li></ul>
+      
+                     
+                     </div>
+   </div>
+   
+		<div id="sticker"></div><div style="background:white; z-index:-1;">
+            <div class="container" >
+				<div class="logo_box" >
+<div class="logo"> <a href="index.html" title="bookatailor" rel="home"><img alt="bookatailor.com" src="img/logo-bat_batnew.png"></a></div>
+			  </div>
+				<div class="logo_right_box" style="background:white; z-index:-2;">
+<div class="main-menu-area" style="background:white; z-index:-2;">
+						<div class="main-menu"  style="background:white; z-index:0;">
+							<nav>
+								<ul id="nav" style="background:white; z-index:0;">
+                                
+<li><a href="about-us.html">ABOUT </a></li>
+<li><a href="how_It_works.html">HOW IT WORKS </a></li>
+ <li><a href="weddings.html">Weddings </a></li>
+<li><a href="http://www.bookatailor.com/onlinegiftcard/">GIFT CARDS  </a></li>
+
+<li><a href="location.html">LOCATIONS </a></li>
+<li><a href="contact.html">CONTACT </a></li>
+							  </ul>
+							</nav>
+						</div>
+					</div>
+					
+				</div>
+			</div>	
+			</div>
+            
+		<div class="clr"></div>
+        </div>
+	</div>
+	<div class="about-us-bannaer-area franchise">
+		<div class="container">
+        <div class="row">
+				<div class="col-md-12 col-lg-12">
+					<div class="mobile-menu">
+						
+<ul id="mobile-menu">
+<li><a href="index.html">HOME </a></li>
+<li><a href="about-us.html">ABOUT </a></li>
+<li><a href="how_It_works.html">HOW IT WORKS </a></li>
+ <li><a href="weddings.html">Weddings </a></li>
+<li><a href="http://www.bookatailor.com/onlinegiftcard/">GIFT CARDS  </a></li>
+
+<li><a href="location.html">LOCATIONS </a></li>
+<li><a href="contact.html">CONTACT </a></li>
+</ul>
+					</div>
+				</div>
+		  </div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12">
+					<div class="banner-area">
+						<h3 >Franchise Information   </h3>
+					</div>
+				</div>
+		  </div>
+		</div>
+	</div>
+    
+    
+    
+    
+    <div class="container">
+		
+		<div class="row">
+			
+		</div>
+		
+		<div class="row">
+			<div class="col-lg-12 col-md-12">
+				<div class="blog-area-all fix full-width">
+					<div class="single-blog-area fix">
+						<div class="blog-content">
+							<div class="">
+								<h4 style="text-align:left;">HISTORY</h4>
+								<p>Before BOOKATAILOR came to fruition, Jacomo Hakim and his father 
+launched, Gemma Suits. A privately owned company, where Jacomo began selling custom suits at a wholesale level, to local 
+mom and pop locations. This is when and where Jacomo learned and realized that there were some major issues with the 
+custom clothing industry, that if fixed, could make the industry much more 
+lucrative. In 2012, BOOKATAILOR was founded.</p>
+							</div>
+						</div>
+					</div>
+					
+<div class="single-blog-area fix">
+						<div class="blog-content">
+							<div class="">
+								<h4 style="text-align:left;">ABOUT</h4>
+	
+
+<p>BOOKATAILOR is an innovative pioneer in 
+bespoke custom clothing for both men 
+and women. We are innovative in that we 
+offer the best quality at the most 
+affordable prices, which lie far beneath 
+those of our competitors. </p>
+
+<p>BOOKATAILOR is vertically integrated, 
+meaning that it is independent in its 
+production. Being vertically integrated 
+significantly allows us to expedite 
+delivery time and have our clients 
+garments ready in 4-6 weeks, a 
+significantly shorter turnaround than the 
+industry norm. </p>
+<p>BOOKATAILOR has been in business for 
+over 3 years with more than 20,000 
+clients, 9 franchises and 3 corporately 
+owned showrooms, nationwide.</p>
+							</div>
+						</div>
+					</div>		
+                    
+                    
+<div class="single-blog-area fix">
+						<div class="blog-content">
+							<div class="">
+								<h4 style="text-align:left;">WE SOLVED FOUR 
+PROBLEMS</h4>
+						<p>More affordable making us more 
+accessible 
+Developed and automated 
+technology, allowing for a more 
+elevated and interactive custom suit 
+experience 
+Less time consuming, providing 
+convenience to our clients 
+Quick turnaround, which makes us 
+the fastest platform for consumers to 
+receive their custom garments</p>
+							</div>
+						</div>
+					</div>
+                    
+                    
+                    <div class="single-blog-area fix">
+						<div class="blog-content">
+							<div class="">
+								<h4 style="text-align:left;">SUPPORT</h4>
+						<p>When you join BOOKATAILOR’s team as a franchise owner, you will receive support 
+in numerous different business segments.<br>
+ 
+See below:
+<ul>
+<li>ACCOUNTING & LEGAL </li>
+
+<li>OPERATIONAL</li> 
+
+<li>MARKETING </li>
+
+<li>PURCHASING</li> 
+
+<li>RESEARCH & DEVELOPMENT </li>
+
+<li>PROGRAM OVERSIGHT</li></ul>
+
+</p>
+							</div>
+						</div>
+					</div>
+                    
+                  
+<div class="single-blog-area fix">
+						<div class="blog-content">
+							<div class="">
+								<h4 style="text-align:left;">TRAINING INCLUDES</h4>
+					
+
+<p>
+	<strong>1 WEEK </strong>
+Training at BOOKATAILOR’s headquarters, 
+based in New York. Training begins 2-4 
+weeks prior to the franchise officially 
+opening for business </p>
+
+
+<p><strong>2-3 DAYS </strong>Training at your location to get your 
+business started </p>
+
+
+<p><strong> 2 SESSIONS PER YEAR</strong> 2 days of refresh training, updates, or 
+meetings in each session </p>
+							</div>
+						</div>
+					</div>	
+                    
+<div class="single-blog-area fix">
+						<div class="blog-content">
+							<div class="">
+								<h4 style="text-align:left;">QUALIFICATIONS</h4>
+						<p>Recommended qualifications for potential 
+franchise owners:</p>
+<ul>
+<li>CAPABLE OF INVESTMENT 
+REQUIREMENTS</li> 
+
+<li>STRONG SALE & CLIENT SERVICES 
+EXPERIENCE </li> 
+<li>
+SEAMLESS TIME & SCHEDULE 
+MANAGEMENT </li> 
+<li>
+STRONG SENSE OF INTEGRITY WITH 
+CORPORATE & CLIENT RELATIONSHIPS </li> 
+<li>
+WILLINGNESS & COMMITMENT TO 
+EXCELLENT SERVICE</li> </ul>
+							</div>
+						</div>
+					</div>
+                    				
+<div class="single-blog-area fix">
+						<div class="blog-content">
+							<div class="">
+								<h4 style="text-align:left;">IDEAL FRANCHISE 
+OWNERS</h4>
+<ul><li>FRANCHISE OPERATION OR 
+RETAIL SERVICE EXPERIENCE </li>
+<li>
+BUSINESS OWNER AND/OR 
+MANAGERIAL EXPERIENCE </li>
+<li>
+ENTREPRENEUR LOOKING TO 
+START A BUSINESS</li></ul>
+							</div>
+						</div>
+					</div>
+					
+<div class="single-blog-area fix">
+						<div class="blog-content">
+							<div class="">
+								<h4 style="text-align:left;">NEXT STEPS</h4>
+<p>STEP 1: Fill out the Franchise Owner Application </p>
+
+<p>STEP 2: Send the Franchise Owner Application to 
+franchise@bookatailor.com  </p>
+
+
+<p>STEP 3: Schedule an initial phone consultation to 
+meet the BOOKATAILOR team </p>
+
+
+<p>STEP 4: Schedule a “Discovery Day” </p>
+
+
+<p>STEP 5: Review Franchise Owner Agreement</p>
+
+
+<p>STEP 6: Join the BOOKATAILOR team!</p>
+							</div>
+						</div>
+					</div>			
+<div class="single-blog-area fix">
+						<div class="blog-content">
+							<div class="">
+								<h4 style="text-align:left;">INTERESTED? </h4>
+<p>THE BOOKATAILOR TEAM HAS A 
+BUSINESS MODEL WITH PROVEN 
+PROFITABILITY AND ENORMOUS 
+VALUE TO CONSUMERS. </p>
+
+
+
+<h6>Contact us: </h6>
+
+11 Middle Neck Road, Suite 300<br>
+
+Great Neck, NY 11021<br>
+
+212-486-6628<br>
+
+<a href="mailto:franchise@bookatailor.com">franchise@bookatailor.com</a><br>
+
+BOOKATAILOR.COM<br>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	  </div>
+	</div>
+
+
+
+
+	
+	
+
+	<div class="clear"></div>
+
+	<div class="footer-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12">
+					<div class="footer">
+						<div class="row">
+							
+							
+							<div class="col-xs-12 col-md-8 col-lg-8 col-sm-8">
+								<div class="footer-menu-area">
+									<div class="footer-menu">
+										<ul>
+											<li><a href="about-us.html">About</a></li>
+											<li><a href="our-ceo.html">Our CEO </a></li>
+											<li><a href="press.html">Press </a></li>
+											
+
+                                            <li><a href="weddings.html">Weddings </a></li>
+										</ul>
+									</div>
+									<div class="footer-menu"><ul>
+											<li><a href="how_It_works.html">How It Works </a></li>
+											<li><a href="http://www.bookatailor.com/onlinegiftcard/">Gift Card </a></li>
+                                            <li><a href="faq.html">FAQ </a></li>
+
+										</ul>
+									</div>
+                                    
+
+                                    <div class="footer-menu">
+										<ul>
+											<li><a href="refund-policy.html">Refund Policy </a></li>
+                                            <li><a href="privacy-policy.html">Privacy Policy </a></li>
+                                            <li><a href="military.html">MILITARY DISCOUNT </a></li>
+                                            <li><a href="students.html">STUDENT DISCOUNT  </a></li> <li><a href="franchise.html">Franchise Information  </a></li>
+									  </ul>
+									</div>
+								</div>
+							</div>
+                            
+                            
+                            <div class="col-xs-12 col-lg-4 col-md-4 col-sm-4">
+								<div class="news-letter">
+									<h2>Newsletter</h2>
+									<p>Sign up for our newsletter and receive monthly special offers, updates and style tips</p>
+									<form action="#">
+										<p><input name="emailID" id="emailID" type="text" placeholder="Enter your email..."/></p>
+										<p><input type="button" value="JOIN NOW" onClick="validateNewsletter();" /></p>
+									</form>
+                                    <div id="newsletterError" style="font-size:12px;font-weight:bold;
+                                     text-transform:uppercase;"></div>
+								</div>
+                                <div class="news-letter">
+                                <br>
+                                
+                                
+                                <div class="modal fade" id="basicModal2" tabindex="-1" 
+                                role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                     <div class="modal-header">
+                                        <h4 class="modal-title" id="myModalLabel" style="color:#0000000;">Newsletter</h4>
+                                    </div>
+                                    <div class="modal-body" style="font-size:.70em; line-height:24px;
+                                     font-style:normal; font-weight:100;color:#000000;">
+                                      <br>
+                                     <center><div style="color:#000000; font-size:22px;">Thank You</div> <br>
+                                      <div style="color:#000000;font-size:16px;text-align:center;">
+                                       You will receive an email confirmation shortly.</div>
+                                      <br></center>
+                                     </div>
+                                    <div class="modal-footer">
+                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                   </div>
+                                  </div>
+                                  </div>
+                                </div>
+                                
+                                
+                                <script language="javascript" type="text/javascript">
+								  function validateNewsletter()
+								  {	
+									var regEmail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+									
+									if(regEmail.test(jQuery("#emailID").val()) == false)
+									{ 
+										document.getElementById('newsletterError').innerHTML = 'Please enter a valid email address';
+										document.getElementById('newsletterError').style.color = 'red';
+										return false;
+									}
+									else
+									{
+										document.getElementById('newsletterError').innerHTML = '';
+										
+										var dataString = 'emailID='+ jQuery("#emailID").val();
+										
+										  jQuery.ajax({
+											type: "POST",
+											url: "_check-email.cfm",
+											data: dataString,
+											cache: false,
+											success: function(userCount)
+											{
+											
+												if(userCount > 0)
+												{
+													/* document.getElementById('newsletterError').innerHTML = 
+													'Welcome to the #BespokeLife'; */
+													document.getElementById('newsletterError').innerHTML = '';
+													jQuery('#basicModal2').modal();	
+													return false;
+												}
+												else
+												{
+													insertInToMailingList(emailID);
+												}
+												
+											}
+										});
+										
+									}
+								  }	
+								
+								  function insertInToMailingList(emailID)
+								  {
+									 var dataString = 'emailID='+ jQuery("#emailID").val();
+									 jQuery.ajax({
+										type: "POST",
+										url: "_insert-email.cfm",
+										data: dataString,
+										cache: false,
+										success: function(userCount)
+										{
+											/* document.getElementById('newsletterError').innerHTML = 
+											'Welcome to the #BespokeLife'; */
+											document.getElementById('newsletterError').innerHTML = '';
+											jQuery('#basicModal2').modal();	
+											return false;
+										}
+									});
+								  }
+								
+								
+								  function TrimInputs(str)
+								  {
+								 	 return str.replace(/^\s+|\s+$/g,'');
+								  }
+								</script>
+
+                                <h2>Follow us</h2>
+                                <div class="social-media">
+						<ul class="social-icons">
+                        <li>
+								<a class="color-tooltip instagram" target="_blank" href="https://www.instagram.com/bookatailor/">
+									<i class="fa fa-instagram"></i>								</a>							</li>
+							<li>
+								<a class="color-tooltip facebook" target="_blank" href="https://www.facebook.com/bookatailor">
+									<i class="fa fa-facebook"></i>								</a>							</li>
+                            
+                            							<li>
+								<a class="color-tooltip pinterest" target="_blank" href="https://www.pinterest.com/bookatailor/">
+									<i class="fa fa-pinterest-square"></i>								</a>							</li>
+							<li>
+								<a class="color-tooltip twitter" target="_blank"  href="https://twitter.com/BookATailor">
+									<i class="fa fa-twitter"></i>								</a>							</li>
+
+							<li>
+								<a class="color-tooltip youtube" target="_blank" href="https://www.youtube.com/channel/UC5R2SMJ9Phk3K2iM92HgOAQ">
+									<i class="fa fa-youtube"></i>								</a>							</li>
+						</ul>
+					</div>
+                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+		  </div>
+			<div class="footer-bottom-area">
+				<div class="row">
+					<div class="col-xs-12 col-lg-6 col-md-6 col-sm-6">
+						<div class="copyright">
+							<p>Copyright (2019) bookatailor.com. All rights reserved.  </p>
+						</div>
+					</div>
+			  <div class="col-xs-12 col-lg-3 col-md-3 col-sm-3">
+						<div class="mail-to">
+							<a target="_blank" href="mailto:info@bookatailor.com">info@bookatailor.com</a>						</div>
+					</div>
+			  <div class="col-xs-12 col-lg-3 col-md-3 col-sm-3">
+						<div class="footer-payment-logo">
+							
+							<img src="img/bat_batnew.png" alt="" />						</div>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	</div>
+	
+
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/batnew_owl.carousel.min.js"></script>
+<script src="js/batnew_jquery-ui.min.js"></script>
+<script src="js/batnew_jquery.slicknav.js"></script>
+<script src="js/batnew_jquery.shuffle.min.js"></script>
+<script src="js/batnew_jquery.countdown.min.js"></script>
+<script src="js/batnew_parallax.js"></script>	
+<script src="js/batnew_jquery.collapse.js"></script>
+<script src="js/batnew_jquery.easing.1.3.min.js"></script>	
+<script src="js/jquery.scrollUp.min.js"></script>	
+<script src="js/batnew_jquery.knob.js"></script>	
+<script src="js/batnew_jquery.appear.js"></script>
+<script src="js/img-zoom/jquery.simpleLens.min.js"></script>
+<script src="js/fancybox/jquery.fancybox.pack.js"></script>			
+<script src="js/batnew_jquery.counterup.min.js"></script>
+<script src="js/batnew_waypoints.min.js"></script>		
+<script src="js/batnew_wow.js"></script>		
+<script>
+new WOW().init();
+</script>
+<script type="text/javascript" src="lib/rs-plugin/js_batnew/jquery.themepunch.tools.min.js"></script>   
+<script type="text/javascript" src="lib/rs-plugin/js_batnew/jquery.themepunch.revolution.min.js"></script>
+<script src="lib/rs-plugin/rs.home.js"></script>
+<script src="js/batnew_main.js"></script>
+<script type="text/javascript" src="js/batnew_jquery-scrolltofixed_batnew.js"></script>
+    <script type="text/javascript">
+        $('#test').scrollToFixed();
+    </script>
+       <!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 968031999;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="../www.googleadservices.com/pagead/f.txt">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/968031999/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+    </body>
+
+<!-- Mirrored from bookatailor.com/franchise.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Mar 2019 19:58:41 GMT -->
+</html>

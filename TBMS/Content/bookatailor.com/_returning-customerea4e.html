@@ -1,0 +1,55 @@
+
+
+
+			   
+			   
+
+ 
+
+
+
+
+	
+	
+
+
+	
+	
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+   <input value="Returning Customer" onClick="show_next('step5','step6','bar2');"
+    style="background-color:#9e0b0f; width:100%; margin:5px 0 20px 0;" type="button" > 
+   
+     <input type="text" placeholder='First Name' value=""
+      id="appointment_firstname" name="appointment_firstname" maxlength="50">
+     <input type="text" placeholder='Last Name' value=""
+      id="appointment_lastname" name="appointment_lastname" maxlength="50">
+     <input type="text" placeholder='Email ID' value=""
+      name="appointment_email" id="appointment_email" maxlength="100">
+     <input type="text" placeholder='Phone Number' class="phone_us" maxlength="20"
+      name="appointment_phone" id="appointment_phone" value="">
+     
+     <input type="hidden" value="" id="address" name="address" maxlength="100"> 
+     <input type="hidden" value="" id="city" name="city" maxlength="50"> 
+     <input type="hidden" value="" id="state" name="state"> 
+     <input type="hidden" value="" id="zip" name="zip" maxlength="5"> 
+    <center> 
+    <div id="appointmentError" style="color:red;font-size:15px;font-weight:bold;
+      text-align:center;text-transform:uppercase;" ></div>
+    <input type="button" value="Previous" onClick="show_prev('step4','bar2');" 
+    style="background-color:#333333;">&nbsp;&nbsp;<input type="button" value="Submit"
+     onClick="validateAppointmentInputs();"></center>
+   

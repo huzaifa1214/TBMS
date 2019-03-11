@@ -1,0 +1,8 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.tailorspoint.com	TRUE	/	FALSE	1999999999	PHPSESSID	54evm3jvm8ub2ulolvnuikmht7
+www.tailorspoint.com	TRUE	/	FALSE	1999999999	ci_session	a%3A5%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%22e7909642380006cc3d33b6ccbfd44f06%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A12%3A%2239.37.182.44%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A50%3A%22Mozilla%2F4.5+%28compatible%3B+HTTrack+3.0x%3B+Windows+98%29%22%3Bs%3A13%3A%22last_activity%22%3Bi%3A1551969921%3Bs%3A9%3A%22user_data%22%3Bs%3A0%3A%22%22%3B%7D01f81d26c3e3afed4c373af3c9497794ef2d7f13
+bookatailor.com	TRUE	/	FALSE	1999999999	CFID	1242255
+bookatailor.com	TRUE	/	FALSE	1999999999	CFTOKEN	47141989
+bookatailor.com	TRUE	/	FALSE	1999999999	CFGLOBALS	urltoken%3DCFID%23%3D1242255%26CFTOKEN%23%3D47141989%23lastvisit%3D%7Bts%20%272019%2D03%2D07%2015%3A01%3A32%27%7D%23timecreated%3D%7Bts%20%272019%2D03%2D07%2014%3A48%3A53%27%7D%23hitcount%3D17%23cftoken%3D47141989%23cfid%3D1242255%23
+

@@ -1,0 +1,15 @@
+.stb-select-container{
+border: 1px solid #dddddd; font-size:14px; font-weight:600; width:100%; border-radius: 0; text-align:center; padding:8px 10px 8px 10px; padding-left: 15px;
+width: 100%; text-transform:uppercase; color:#767676; -webkit-border-radius: 6px 6px 6px 6px; border-radius: 6px 6px 6px 6px;}
+
+.stb-select-container:hover{
+border: 1px solid #fd6801; font-size:14px; font-weight:600; width:100%; border-radius: 0; text-align:center; padding:8px 10px 8px 10px; padding-left: 15px;
+width: 100%; text-transform:uppercase; color:#000000; -webkit-border-radius: 6px 6px 6px 6px; border-radius: 6px 6px 6px 6px;}
+
+
+.stb-select-container ul{list-style-type:none;margin:0;padding:0}
+.stb-select-container select{display:none}
+.stb-select-container .stb-select{position:absolute;background:white;left:-1px; top:38px; border:solid #c2c2c2 1px; border-top:0;z-index:10;width:100%;overflow-x:none;-webkit-border-bottom-left-radius:4px; color:#767676; font-size:14px; font-weight:400;}
+
+
+.stb-select-container span{}.stb-select-container::after{ font-size:16px; font-weight:bold; content:"v";position:absolute;right:30px; -ms-transform:scaleY(0.5);-webkit-transform:scaleY(0.5);transform:scaleY(0.5)}.stb-select-container .stb-select li{}.stb-select-container .stb-select li:first-of-type{}.stb-select-container .stb-select li+li{margin-top:10px; padding-bottom:10px; border-bottom:#c2c2c2 1px solid;}
